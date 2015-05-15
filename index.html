@@ -1,0 +1,24 @@
+jj<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary js Demo</title>
+<script src="http://cdn.binaryjs.com/0/binary.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	var client = new BinaryClient('ws://localhost:9000/binary-endpoint');
+	client.on('stream', function(stream, meta){
+    var parts = [];
+    stream.on('data', function(data){
+      parts.push(data);
+    });
+    stream.on('end', function(){
+      	var video = document.createElement('video');
+		video.src = (window.URL || window.webkitURL).createObjectURL(new Blob(parts));
+		video.controls = true;
+		document.body.appendChild(video);
+    });
+});
+</script>
+</body>
+</html>

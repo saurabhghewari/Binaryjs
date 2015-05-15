@@ -1,0 +1,14 @@
+{
+  "name": "binaryjsDemo",
+  "version": "1.0.0",
+  "description": "Streaming video using binaryjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "saurabhghewari",
+  "license": "Bitroots",
+  "dependencies": {
+    "binaryjs": "^0.2.1"
+  }
+}
